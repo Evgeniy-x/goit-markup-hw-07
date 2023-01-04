@@ -413,6 +413,19 @@ justify-content: space-between;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* hero */
+
+@media screen and (min-width: 768px) {
+
+    .hero-title {
+        max-width: 500px;
+        font-size: 56px;
+        line-height: 1.07;
+        text-transform: none;
+    }
+}
+
+
 /* Description section */
 
 .desc-list {
@@ -427,14 +440,15 @@ justify-content: space-between;
 
 
 .desc-icon {
-    height: 112px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    height: 112px;
     background-color: var(--color-cloud);
     border-radius: 4px;
     margin-bottom: 8px;
 }
+
 
 .desc-title {
     font-weight: 700;
@@ -452,6 +466,9 @@ justify-content: space-between;
     color: var(--color-text);
 }
 
+
+
+
 /* description table */
 
 @media screen and (min-width: 768px) {
@@ -461,13 +478,36 @@ justify-content: space-between;
         flex-wrap: wrap;
         column-gap: 16px;
         row-gap: 72px;
-        justify-content: space-between;
+        width: 736px;
+        margin: 0 auto;
     }   
 
     .desc-item {
-        flex-basis: calc((100% - 16px) / 2);
         text-align: left;
-        
+        width: 356px; 
+    }
+}
+
+/* description desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .desc-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 72px;
+        width: 736px;
+        margin: 0 auto;
+    }
+
+    .desc-item {
+        text-align: left;
+        width: 356px;
+    }
+
+    .desc-icon {
+        display: flex;
     }
 }
 
@@ -510,7 +550,6 @@ justify-content: space-between;
 
 .team-section {
     background-color: var(--color-cloud);
-
 }
 
 .team-title {
@@ -593,7 +632,35 @@ justify-content: space-between;
 }
 
 
+/* team table */
 
+@media screen and (min-width:768px) {
+
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        column-gap: 24px;
+        width: 552px;
+        margin: 0 auto;
+    }
+    
+}
+
+/* team desktop */
+
+@media screen and (min-width:1200px) {
+
+    .team-list {
+        flex-wrap: nowrap;
+    }
+
+    .team-item {
+
+        /* flex-basis: calc((100% - 24px) / 2); */
+    }
+
+}
 
 
 /* Customers */
@@ -612,18 +679,19 @@ justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
     row-gap: 72px;
-    /* column-gap: 16px; */
-    justify-content: space-between;
+    column-gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .customers-item {
-    flex-basis: calc((100% - 16px) / 2);
-    
+    flex-basis: calc((100% - 48px) / 2);
+ 
 }
 
 
 .customers-link {
-    /* width: 168px; */
+    /* width: 190px; */
     height: 88px;
     border: 1px solid var(--color-customers);
     border-radius: 4px;
@@ -643,6 +711,40 @@ justify-content: space-between;
 .customers-svg {
     fill: currentColor;
 }
+
+
+/* customers table */
+
+@media screen and (min-width: 768px) {
+    
+    .customers-list {
+        row-gap: 72px;
+        column-gap: 24px;
+        justify-content: none;
+        width: 552px;
+    }
+
+    .customers-item {
+        width: 168px;
+        flex-basis: auto;
+        
+    }
+}
+
+
+/* customrs desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .customers-list {
+        flex-wrap: nowrap;
+        row-gap: 0;
+        column-gap: 24px;
+        justify-content: center;
+    }
+
+}
+
 
 
 /* Portfolio */
@@ -828,11 +930,6 @@ justify-content: space-between;
 }
 
 
-
-.footer-subscribe {
-    
-}
-
 .subscribe-form {
     display: flex;
     flex-direction: column;
@@ -901,11 +998,23 @@ justify-content: space-between;
 }
 
 
-@media screen and (max-width: 1200px) {
-    .desc-icon {
-        display: none;
+/* footer table */
+
+@media screen and (min-width:768px) {
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        column-gap: 24px;
+        row-gap: 72px;
+        text-align: left;
+        width: 600px;
     }
+    
 }
+
 
 
 /* Modal */
@@ -948,6 +1057,13 @@ justify-content: space-between;
     .modal {
         width: 408px;
         padding: 72px 24px 24px;
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 24px;
     }
 
 }
