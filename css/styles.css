@@ -176,6 +176,13 @@ h1,h2,h3,p,ul {
     margin-bottom: 40px;
 }
 
+@media screen and (max-width: 428px) {
+    .contact-tel {
+        font-size: 20px;
+        margin-bottom: 20px;
+    } 
+}
+
 .contact-mail {
     font-weight: 500;
     font-size: 20px;
@@ -578,10 +585,10 @@ justify-content: space-between;
 }
 
 .present-item {
-    flex-basis: calc((100%-48px)/3);
+    /* flex-basis: calc((100%-48px)/3); */
 }
 
-.present-item img {
+.present-img {
     display: block;
 }
 
