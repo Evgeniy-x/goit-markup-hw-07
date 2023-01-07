@@ -390,9 +390,6 @@ justify-content: space-between;
 }
 
 
-
-
-
 /* main content */
 
 .hero-section {
@@ -456,6 +453,16 @@ justify-content: space-between;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(to right,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero-image-mobile@2x.jpg);
+    }
+}
+
 /* hero tablet*/
 
 @media screen and (min-width: 768px) {
@@ -477,14 +484,26 @@ justify-content: space-between;
         text-transform: none;
         margin-bottom: 40px;
     }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx){
+        .hero-section {
+            background-image: linear-gradient(to right,
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero-image-tablet@2x.jpg);
+        }
+    }
 }
+
+/* hero desktop */
 
 @media screen and (min-width: 1200px) {
 
     .hero-section {
         background-image: linear-gradient(to right,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(../images/hero-image-desktop.jpg);
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)), url(../images/hero-image-desktop.jpg);
     }
 
     .hero-container {
@@ -494,10 +513,18 @@ justify-content: space-between;
     .hero-title {
         margin-bottom: 48px;
     }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(to right,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero-image-desktop@2x.jpg);
+        }
 }
-
-
-
+    
+}
 
 
 /* Description section */
@@ -617,10 +644,6 @@ justify-content: space-between;
     gap: 24px;
 }
 
-.present-item {
-    /* flex-basis: calc((100%-48px)/3); */
-}
-
 .present-img {
     display: block;
 }
@@ -633,7 +656,6 @@ justify-content: space-between;
     .present-section {
         display: block;
     }
-
 }
 
 /*Team Section*/
