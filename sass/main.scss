@@ -1,0 +1,16 @@
+$color: green;
+
+
+body {
+    background-color: $color;
+}
+
+p {
+    color: black;
+}
+
+p {
+    background-color: #fff;
+    margin-left: 0;
+    color: $color;
+}
